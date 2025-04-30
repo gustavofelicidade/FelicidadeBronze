@@ -24,3 +24,16 @@ DATABASES = {
         default="sqlite:///" + str(BASE_DIR / "db.sqlite3"), conn_max_age=600
     )
 }
+# settings.py
+ROOT_URLCONF = "beleza.urls"
+
+TEMPLATES = [       # mantenha como o startproject gerou
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "templates"],
+        # ...
+    }
+]
+
+WSGI_APPLICATION = "beleza.wsgi.application"
+
